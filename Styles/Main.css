@@ -1,0 +1,159 @@
+/* -- Font CDN -- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700;800;900&display=swap');
+
+/* -- Variables -- */
+:root{
+    --color-medium-black:#4D4D4D;
+    --transition-300ms:all 0.3s ease;
+    --bg-color-blue-light: #0663C7;
+}
+
+/* -- For High Performance -- */
+.d-flex{
+    display: flex
+}
+.alg-itm-cntr{
+    align-items: center;
+}
+.jst-cnt-cntr{
+    justify-content: center;
+}
+input, button{
+    outline: none;
+    border: none;
+}
+.hr-elem{
+    width:100%;
+    border-color: #E4E4E4;
+    margin-block: 16px;
+}
+
+/* -- For AlL Element -- */
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* -- Main StyleSheet -- */
+body{
+    position: relative;
+    height: 100vh;
+    font-family: "Poppins", serif;
+    background-image: url("../Asset/Pic/Background-Image.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-inline: 25px;
+}
+.modal{
+    position: fixed;
+    top: 40px;
+    right: 0;
+    padding: 14px 10px 14px 25px;
+    border-top-left-radius: 65px;
+    border-bottom-left-radius: 65px;
+    transition: all 0.6s ease;
+    background-color: #74E291;
+    transform: translateX(100%);
+}
+.modal > span{
+    color: #fff;
+    font-size: 15px;
+}
+.login-section{
+    width: 100%;
+    max-width: 851px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 38% 1fr;
+}
+.login_left{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.login_left > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.login_right{
+    background-color: #FCFBFC;
+    padding: 30px 63px;
+}
+.login-header{
+    text-align: center;
+    color:  var(--color-medium-black);
+    font-size: 20px;
+}
+.input-container{
+    width: 100%;
+    gap: 32px;
+}
+.input-filed{
+    position: relative;
+    background-color: #E4E4E4;
+    width: 100%;
+    height: 56px;
+    padding-inline: 20px;
+    border-radius: 10px;
+    gap: 2px;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #E4E4E4;
+    transition: border 0.4s ease;
+}
+.input-filed *{
+    transition: all 0.42s ease-in-out;
+}
+.input-filed > label{
+    font-size: 15px;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 16px 20px;
+    cursor: text;
+}
+.input-filed > input{
+    background-color: transparent;
+    font-size: 16px;
+    visibility: hidden;
+}
+.passwordEye{
+    color: #717171;
+    position: absolute;
+    right: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index:4;
+    visibility: hidden;
+    transition: var(--transition-300ms);
+}
+#btnCircleScale{
+    position: absolute;
+    background-color: royalblue;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    top:0;
+    left: -20px;
+    transition: all 2s ease;
+}
+button:hover > #btnCircleScale{
+    transform: scale(105);
+}
+
+/* -- Responsive Able Website -- */
+@media only screen and (max-width: 425px){
+    button, input[type="checkbox"], .passwordEye{
+        cursor: none;
+    }
+}
