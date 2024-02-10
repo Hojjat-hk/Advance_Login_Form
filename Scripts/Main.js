@@ -18,7 +18,7 @@ function focusOnInputHandler(item){
     item.target.style.cssText = "position: static;padding: 0;font-size:12px;";
     item.target.parentElement.style.cssText = "background-color: #fff;border-color:#0671E0";
     item.target.nextElementSibling.style.cssText = "visibility: visible;";
-    item.target.nextElementSibling.nextElementSibling.style.cssText = "visibility: visible;";
+    item.target.parentElement.lastElementChild.style.visibility = "visible";
 }
 function temporaryValidation(event){
     let inputValue = event.value;
