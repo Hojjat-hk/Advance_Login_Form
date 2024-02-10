@@ -62,7 +62,7 @@ function checkInputValidection(){
                         validInputX(input)
                     }else{
                         invalidInput(input)
-                        invalidInput(inputElems[inputElems.length - 2])
+                        invalidInput(inputElems[inputElems.length-2])
                     }
                 }else{
                     invalidInput(input)
