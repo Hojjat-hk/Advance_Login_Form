@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Hojjat Hekmatipour">
+    <link rel="stylesheet" type="text/css" href="Styles/Main.css">
+    <link rel="stylesheet" type="text/css" href="Styles/Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <title>Real world | Login</title>
+</head>
+<body class="d-flex jst-cnt-cntr alg-itm-cntr">
+    <div class="modal">
+        <span>Your login was successful</span>
+    </div>
+    <section class="login-section">
+
+        <div class="login_left">
+            <img src="Asset/Pic/Login-Art.svg" alt="Login Picture">
+        </div>
+
+        <form class="login_right">
+            <h2 class="login-header">Log In</h2>
+            <div class="input-container d-flex alg-itm-cntr jst-cnt-cntr">
+                <div class="input-filed d-flex jst-cnt-cntr">
+                    <label for="usernameLoginInput">Email</label>
+                    <input type="email" placeholder="Enter Text . ." id="usernameLoginInput" autofocus minlength="4" required>
+                </div>
+                <div class="input-filed d-flex jst-cnt-cntr">
+                    <label for="passwordLoginInput">Password</label>
+                    <input type="password" placeholder="Enter Text . ." id="passwordLoginInput" autofocus minlength="4" required>
+                    <i 	class="passwordEye far fa-eye-slash"></i>
+                </div>
+            </div>
+            <div class="forget-remember_container d-flex alg-itm-cntr">
+                <div class="remember-container d-flex alg-itm-cntr">
+                    <input type="checkbox" id="rememberMeLogin">
+                    <label for="rememberMeLogin">Remember me</label>
+                </div>
+                <div class="forget-container d-flex alg-itm-cntr">
+                    <a href="#" id="forgetMyPassword">Forget Password</a>
+                </div>
+            </div>
+            <button type="button" class="login-submit-btn">
+                <div id="btnCircleScale"></div>
+                <span>Sign In</span>
+            </button>
+            <hr class="hr-elem">
+            <div class="login-via-another_container d-flex alg-itm-cntr">
+                <h2 class="login-header">Log in Via</h2>
+                <div class="social-container d-flex jst-cnt-cntr alg-itm-cntr">
+                    <div class="d-flex jst-cnt-cntr alg-itm-cntr"><img src="Asset/Pic/Facebook.svg" alt="Facebook Logo"></div>
+                    <div class="d-flex jst-cnt-cntr alg-itm-cntr"><img src="Asset/Pic/Google.svg" alt="Google Logo"></div>
+                    <div class="d-flex jst-cnt-cntr alg-itm-cntr"><img src="Asset/Pic/Apple.svg" alt="Apple Logo"></div>
+                </div>
+            </div>
+            <div id="createAccount" class="d-flex alg-itm-cntr jst-cnt-cntr">
+                <span>Dose’t have an account?</span>
+                <a href="Register.html" style="color:#000;"><b><u>Create Account</u></b></a>
+            </div>
+        </form>
+
+    </section>
+    <script type="application/javascript" src="Scripts/Main.js" defer></script>
+    <script type="application/javascript" src="Scripts/Login.js" defer></script>
+</body>
+</html>
+<!--Access to this project : https://github.com/Hojjat-hk /-->

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Hojjat Hekmatipour">
+    <link rel="stylesheet" type="text/css" href="Styles/Main.css">
+    <link rel="stylesheet" type="text/css" href="Styles/Register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <title>Real world | Register</title>
+</head>
+<body class="d-flex jst-cnt-cntr alg-itm-cntr">
+<div class="modal">
+    <span>Your login was successful</span>
+</div>
+<section class="login-section">
+    <div class="login_left">
+        <img src="Asset/Pic/Login-Art2.svg" alt="Login Picture">
+    </div>
+
+    <form class="login_right">
+        <h2 class="login-header">Sign Up</h2>
+        <div class="input-container">
+            <div class="input-filed d-flex jst-cnt-cntr">
+                <label for="userFirstNameInput">Firstname</label>
+                <input data-name="firstName" type="text" placeholder="Enter Text . ." id="userFirstNameInput" autofocus minlength="4" required>
+            </div>
+            <div class="input-filed d-flex jst-cnt-cntr">
+                <label for="userLastNameInput">Lastname</label>
+                <input data-name="LastName" type="text" placeholder="Enter Text . ." id="userLastNameInput" autofocus minlength="4" required>
+            </div>
+            <div class="input-filed d-flex jst-cnt-cntr">
+                <label for="emailRegisterInput">Email Address</label>
+                <input data-name="emailAddress" type="email" placeholder="Enter Text . ." id="emailRegisterInput" autofocus minlength="4" required>
+            </div>
+            <div class="input-filed d-flex jst-cnt-cntr">
+                <label for="passwordStepOne">Enter Password</label>
+                <input data-name="PassStep1" type="password" placeholder="Enter Text . ." id="passwordStepOne" autofocus minlength="4" required>
+                <i 	class="passwordEye far fa-eye-slash"></i>
+            </div>
+            <div class="input-filed d-flex jst-cnt-cntr">
+                <label for="passwordStepTwo">Re - Enter Password</label>
+                <input data-name="PassStep2" type="password" placeholder="Enter Text . ." id="passwordStepTwo" autofocus minlength="4" required>
+                <i 	class="passwordEye far fa-eye-slash"></i>
+            </div>
+        </div>
+        <div class="rule_container d-flex alg-itm-cntr">
+            <input type="checkbox" id="acceptRule">
+            <label for="acceptRule">By Clicking on verify you agree with the terms & condition of the organization</label>
+        </div>
+        <button type="button" class="login-submit-btn">
+            <div id="btnCircleScale"></div>
+            <span>Register Account</span>
+        </button>
+    </form>
+</section>
+    <script type="application/javascript" src="Scripts/Main.js" defer></script>
+    <script type="application/javascript" src="Scripts/Register.js" defer></script>
+</body>
+</html>
+<!--Access to this project : https://github.com/Hojjat-hk /-->
