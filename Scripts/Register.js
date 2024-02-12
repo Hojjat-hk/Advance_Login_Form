@@ -23,41 +23,41 @@ function checkInputValidection(){
         acceptRulesBtn.nextElementSibling.style.color = "#000";
         inputElems.forEach(function(input){
             if(input.dataset.name === "firstName"){
-                if(input.value.length >= 3){
-                    firstName = input.value;
+                if(input.value.trim().length >= 3){
+                    firstName = input.value.trim();
                     validInputX(input)
                 }else{
                     invalidInputX(input)
                 }
             }
             if(input.dataset.name === "LastName"){
-                if(input.value.length >= 4){
-                    lastName = input.value;
+                if(input.value.trim().length >= 4){
+                    lastName = input.value.trim();
                     validInputX(input)
                 }else{
                     invalidInputX(input)
                 }
             }
             if(input.dataset.name === "emailAddress"){
-                if(input.value.length >= 7){
-                    emailAddress = input.value;
+                if(input.value.trim().length >= 7){
+                    emailAddress = input.value.trim();
                     validInputX(input)
                 }else{
                     invalidInputX(input)
                 }
             }
             if(input.dataset.name === "PassStep1"){
-                if(input.value.length >= 8){
-                    passStep1 = input.value;
+                if(input.value.trim().length >= 8){
+                    passStep1 = input.value.trim();
                     validInputX(input)
                 }else{
                     invalidInputX(input)
                 }
             }
             if(input.dataset.name === "PassStep2"){
-                if(input.value.length >= 8){
+                if(input.value.trim().length >= 8){
                     if(passStep1 === input.value){
-                        passStep2 = input.value;
+                        passStep2 = input.value.trim();
                         isMatch = true;
                         validInputX(input)
                     }else{
