@@ -27,6 +27,9 @@ input, button{
     border-color: #E4E4E4;
     margin-block: 16px;
 }
+a{
+    text-decoration: none;
+}
 
 /* -- For AlL Element -- */
 *, *::before, *::after{
