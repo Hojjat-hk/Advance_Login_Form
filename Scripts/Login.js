@@ -8,7 +8,7 @@ function performLoginOperation () {
         let data = JSON.parse(localStorage.getItem("UsersData"));
         if(data){
             userDataBase = data;
-        }
+        }  
         //
         userDataBase.forEach(function (user){
             if(usernameValue === user.email){
