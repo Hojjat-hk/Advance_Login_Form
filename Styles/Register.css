@@ -56,7 +56,15 @@ label[for="acceptRule"]{
     font-weight: 400;
     cursor:pointer;
 }
-
+.login-submit-btn--active{
+    background-color: var(--bg-color-blue-light);
+}
+.login-submit-btn--active > #btnCircleScale{
+    display: block;
+}
+.login-submit-btn--active > span{
+    color: #fff;
+}
 /* -- Responsive Able Website -- */
 @media only screen and (max-width: 870px){
     .login_right{

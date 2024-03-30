@@ -1,5 +1,6 @@
 // [+] Variables
 const acceptRulesBtn = $.querySelector('#acceptRule');
+const subBtn        = $.querySelector(".login-submit-btn");
 userDataBase = [
     {email:"Admin", password: "Admin", firstName: "Hojjat", lastName: "Hekmatipour"}
 ]
@@ -7,13 +8,9 @@ userDataBase = [
 function acceptTerms(){
     if(acceptRulesBtn.checked){
         acceptRulesBtn.nextElementSibling.style.color = "#000";
-        subBtn.style.backgroundColor = "var(--bg-color-blue-light)";
-        subBtn.lastElementChild.style.color =  "#fff";
-        subBtn.firstElementChild.style.display = "block";
+        subBtn.classList.add("login-submit-btn--active");
     }else{
-        subBtn.style.backgroundColor = "#EEF5FC";
-        subBtn.lastElementChild.style.color =  "#ABBED1";
-        subBtn.firstElementChild.style.display = "none";
+        subBtn.classList.contains("login-submit-btn--active") && subBtn.classList.remove("login-submit-btn--active");
     }
 }
 function checkInputValidection(){

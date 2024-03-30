@@ -2,7 +2,6 @@
 const $ = document;
 
 // [+] Variables
-const subBtn        = $.querySelector(".login-submit-btn");
 const usernameInput = $.querySelector("#usernameLoginInput");
 const passwordInput = $.querySelector("#passwordLoginInput");
 let inputLabels     = $.querySelectorAll(".input-filed > label");
@@ -39,20 +38,20 @@ function showModal(color = '',text = ''){
 function closeModal(){
     setTimeout(function(){
         modalElem.style.transform = "translateX(100%)";
-    },2900)
+    },2900);
 }
 function showPasswordHandler(event){
     if(event.target.classList.contains("fa-eye-slash")){
-        event.target.classList.replace("fa-eye-slash", "fa-eye")
+        event.target.classList.replace("fa-eye-slash", "fa-eye");
         event.target.previousElementSibling.setAttribute("type", "text");
     }else{
-        event.target.classList.replace("fa-eye", "fa-eye-slash")
+        event.target.classList.replace("fa-eye", "fa-eye-slash");
         event.target.previousElementSibling.setAttribute("type", "password");
     }
 }
 function changeLocation (locationX = ""){
     setTimeout(function (){
-        location.replace(locationX)
+        location.replace(locationX);
     },1000)
 }
 
