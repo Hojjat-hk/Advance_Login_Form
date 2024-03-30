@@ -142,6 +142,10 @@ body{
 .input-filed--active > input{
     visibility: visible;
 }
+.invalid-input{
+    background-color:#FFF1F0;
+    border-color:#C10905;
+}
 .passwordEye{
     color: #717171;
     position: absolute;

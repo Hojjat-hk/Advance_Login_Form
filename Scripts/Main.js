@@ -26,10 +26,10 @@ function temporaryValidation(event){
     }
 }
 function invalidInput(element){
-    element.parentElement.style.cssText = "background-color:#FFF1F0;border-color:#C10905;";
+    element.parentElement.classList.add("invalid-input");
 }
 function validInput(element){
-    element.parentElement.style.cssText = "background-color: #fff;border-color:#0671E0";
+    element.parentElement.classList.contains("invalid-input") && element.parentElement.classList.remove("invalid-input");
 }
 function showModal(color = '',text = ''){
     modalElem.style.cssText = `background-color: ${color};transform: translateX(0);`
