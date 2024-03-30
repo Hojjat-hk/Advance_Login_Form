@@ -152,10 +152,9 @@ body{
 .passwordEye{
     color: #717171;
     position: absolute;
-    right: 12px;
     font-size: 18px;
     right: 14px;
-    top: 26px;
+    top: 24px;
 
     cursor: pointer;
     z-index:4;
