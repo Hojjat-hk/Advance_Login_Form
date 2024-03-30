@@ -114,6 +114,7 @@ body{
     transition: all 0.2s ease;
 }
 .input-filed > label{
+    white-space:nowrap;
     font-size: 15px;
     position: absolute;
     z-index: 2;
