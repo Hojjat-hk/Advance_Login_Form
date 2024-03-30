@@ -109,10 +109,9 @@ body{
     flex-direction: column;
     overflow: hidden;
     border: 1px solid #E4E4E4;
-    transition: border 0.4s ease;
 }
-.input-filed *{
-    transition: all 0.42s ease-in-out;
+.input-filed, .input-filed *{
+    transition: all 0.2s ease;
 }
 .input-filed > label{
     font-size: 15px;
@@ -129,6 +128,18 @@ body{
     background-color: transparent;
     font-size: 16px;
     visibility: hidden;
+}
+.input-filed--active{
+    background-color: #fff;
+    border-color:#0671E0;
+}
+.input-filed--active > label {
+    position: static;
+    padding: 0;
+    font-size:12px;
+}
+.input-filed--active > input{
+    visibility: visible;
 }
 .passwordEye{
     color: #717171;
