@@ -8,6 +8,7 @@ let inputLabels     = $.querySelectorAll(".input-filed > label");
 let inputElems      = $.querySelectorAll(".input-filed > input");
 let modalElem       = $.querySelector(".modal");
 let showPasswordBtn = $.querySelectorAll(".passwordEye");
+let dataBase        = null;
 
 // [+] Users Data
 let userDataBase = [];
@@ -54,13 +55,27 @@ function changeLocation (locationX = ""){
         location.replace(locationX);
     },1000)
 }
+function createIndexedDB () {
+    let dbOpenReq = indexedDB.open("RealWorld", 3);
+    dbOpenReq.addEventListener("success", event => {
+        dataBase = event.target.result;
+    });
+    dbOpenReq.addEventListener("upgradeneeded", event => {
+        dataBase = event.target.result;
+        if(!dataBase.objectStoreNames.contains("usersInformation")){
+            dataBase.createObjectStore("usersInformation", {
+                keyPath : "userID"
+            });
+        }
+    });
+}
+function returnTransactionObject (databaseName, objectStoreName, txMode) {
+    let transaction = databaseName.transaction(objectStoreName, txMode);
+    let store = transaction.objectStore(objectStoreName);
+    return store;
+}
 
 // [+] Events
-subBtn.addEventListener("click", function (){
-    inputElems.forEach(function (item){
-        temporaryValidation(item);
-    })
-});
 inputLabels.forEach(function(item){
     item.addEventListener("click", focusOnInputHandler)
 });
@@ -81,3 +96,4 @@ inputElems.forEach(function(item){
         event.preventDefault();
     })
 });
+window.addEventListener("load", createIndexedDB);

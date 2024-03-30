@@ -142,6 +142,9 @@ body{
 .input-filed--active > input{
     visibility: visible;
 }
+.input-filed--active > i{
+    visibility: visible !important;
+}
 .invalid-input{
     background-color:#FFF1F0;
     border-color:#C10905;
@@ -151,6 +154,9 @@ body{
     position: absolute;
     right: 12px;
     font-size: 18px;
+    right: 14px;
+    top: 26px;
+
     cursor: pointer;
     z-index:4;
     visibility: hidden;
