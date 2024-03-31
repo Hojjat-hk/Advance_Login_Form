@@ -53,6 +53,7 @@ body{
 .modal{
     position: fixed;
     top: 40px;
+    z-index:100;
     right: 0;
     padding: 14px 10px 14px 25px;
     border-top-left-radius: 65px;
