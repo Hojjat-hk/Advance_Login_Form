@@ -18,12 +18,16 @@
         Login Successful !
     </h3>
     <p>You have successfully signed in to your account. <br> You can close this window and continue using the product.</p>
-    <a href="https://github.com">
-        <button class="close-window">
-            <div id="btnCircleScale"></div>
-            <span>Close Windows</span>
-        </button>
-    </a>
+    <button class="close-window">
+        <div id="btnCircleScale"></div>
+        <span>Close Windows</span>
+    </button>
 </section>
+<script>
+    const closeButton = document.querySelector(".close-window");
+    closeButton.addEventListener("click", (event) => {
+        window.close();
+    });
+</script>
 </body>
 </html>
