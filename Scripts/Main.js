@@ -55,6 +55,7 @@ function changeLocation (locationX = ""){
         location.replace(locationX);
     },1000)
 }
+// Use Indexed DB ++
 function createIndexedDB () {
     let dbOpenReq = indexedDB.open("RealWorld", 3);
     dbOpenReq.addEventListener("success", event => {
@@ -69,6 +70,7 @@ function createIndexedDB () {
         }
     });
 }
+// Use Indexed DB ++
 function returnTransactionObject (databaseName, objectStoreName, txMode) {
     let transaction = databaseName.transaction(objectStoreName, txMode);
     let store = transaction.objectStore(objectStoreName);

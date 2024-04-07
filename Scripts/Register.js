@@ -15,6 +15,7 @@ function acceptTerms(){
         subBtn.classList.contains("login-submit-btn--active") && subBtn.classList.remove("login-submit-btn--active");
     }
 }
+// Validection input
 function checkInputValidection(){
     let firstName, lastName, emailAddress, passStep1, passStep2;
     let isMatch = false;
@@ -85,6 +86,7 @@ function checkInputValidection(){
         acceptRulesBtn.nextElementSibling.style.color = "#C10905";
     }
 }
+// This function is for backend (Duplicate Emails) ++
 function avoidDuplicateEmails(emailAddress, newUser){
     let userObjectStore = returnTransactionObject(dataBase, "usersInformation", "readonly");
     let req = userObjectStore.getAll();
@@ -101,6 +103,7 @@ function avoidDuplicateEmails(emailAddress, newUser){
         }
     });
 }
+// If all the inputs are valid and the email is not duplicated in the database
 function addUserToDataBase(newUser){
     let userObjectStore = returnTransactionObject(dataBase, "usersInformation", "readwrite");
     let req = userObjectStore.add(newUser);
