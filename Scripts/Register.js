@@ -2,6 +2,10 @@
 const acceptRulesBtn = $.querySelector('#acceptRule');
 const subBtn        = $.querySelector(".login-submit-btn");
 
+// [+] Regular Expression
+const nameValidateRegEx = /^[A-Za-zÀ-ÖØ-öø-ÿا-ی ]{3,}$/;
+const emailValidateRegEx = /^[A-Za-z0-9.+\-_~!#$%&‘'/=^{}|*?`]+@[A-Za-z0-9][A-Za-z0-9-]*(?:\.[A-Za-z0-9-]+)+[A-Za-z0-9]$/;
+
 // [+] Functions
 function acceptTerms(){
     if(acceptRulesBtn.checked){
@@ -18,7 +22,7 @@ function checkInputValidection(){
         acceptRulesBtn.nextElementSibling.style.color = "#000";
         inputElems.forEach(function(input){
             if(input.dataset.name === "firstName"){
-                if(input.value.trim().length >= 3){
+                if(nameValidateRegEx.test(input.value.trim())){
                     firstName = input.value.trim();
                     validInput(input)
                 }else{
@@ -26,7 +30,7 @@ function checkInputValidection(){
                 }
             }
             if(input.dataset.name === "LastName"){
-                if(input.value.trim().length >= 4){
+                if(nameValidateRegEx.test(input.value.trim())){
                     lastName = input.value.trim();
                     validInput(input)
                 }else{
@@ -34,10 +38,11 @@ function checkInputValidection(){
                 }
             }
             if(input.dataset.name === "emailAddress"){
-                if(input.value.trim().length >= 7){
+                if(emailValidateRegEx.test(input.value.trim())){
                     emailAddress = input.value.trim();
                     validInput(input)
                 }else{
+                    showModal("#FF6868", "Please enter a valid email!");
                     invalidInput(input)
                 }
             }
@@ -56,6 +61,8 @@ function checkInputValidection(){
                         isMatch = true;
                         validInput(input)
                     }else{
+                        showModal("#FF6868", "The passwords do not match !");
+
                         invalidInput(input)
                         invalidInput(inputElems[inputElems.length-2])
                     }
