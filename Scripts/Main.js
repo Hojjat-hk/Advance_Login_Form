@@ -15,14 +15,15 @@ let userDataBase = [];
 
 // [+] Functions
 function focusOnInputHandler(item){
-    this.classList.add("input-filed--active");
+    this.classList.contains("input-filed--active") || this.classList.add("input-filed--active");
+
     setTimeout(() => {
         for(let el of this.children){
             if(el.nodeName === "INPUT"){
                 el.focus();
             }
         }
-    },10)
+    },20)
 }
 function temporaryValidation(event){
     let inputValue = event.value;
