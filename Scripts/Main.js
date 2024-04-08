@@ -15,7 +15,14 @@ let userDataBase = [];
 
 // [+] Functions
 function focusOnInputHandler(item){
-    this.classList.add("input-filed--active")
+    this.classList.add("input-filed--active");
+    setTimeout(() => {
+        for(let el of this.children){
+            if(el.nodeName === "INPUT"){
+                el.focus();
+            }
+        }
+    },10)
 }
 function temporaryValidation(event){
     let inputValue = event.value;
@@ -78,7 +85,7 @@ function returnTransactionObject (databaseName, objectStoreName, txMode) {
 }
 
 // [+] Events
-inputLabels.forEach(function(item){
+inputFiled.forEach(function(item){
     item.addEventListener("click", focusOnInputHandler)
 });
 showPasswordBtn.forEach(function (btn){
@@ -90,12 +97,12 @@ inputElems.forEach(function(item){
     });
     item.addEventListener("copy", function (event){
         event.preventDefault();
-    })
+    });
     item.addEventListener("cut", function (event){
         event.preventDefault();
-    })
+    });
     item.addEventListener("paste", function (event){
         event.preventDefault();
-    })
+    });
 });
 window.addEventListener("load", createIndexedDB);
