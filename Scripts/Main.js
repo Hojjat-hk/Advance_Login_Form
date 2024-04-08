@@ -2,20 +2,20 @@
 const $ = document;
 
 // [+] Variables
-const usernameInput = $.querySelector("#usernameLoginInput");
-const passwordInput = $.querySelector("#passwordLoginInput");
-let inputLabels     = $.querySelectorAll(".input-filed > label");
-let inputElems      = $.querySelectorAll(".input-filed > input");
-let modalElem       = $.querySelector(".modal");
-let showPasswordBtn = $.querySelectorAll(".passwordEye");
-let dataBase        = null;
+const usernameInput   = $.querySelector("#usernameLoginInput");
+const passwordInput   = $.querySelector("#passwordLoginInput");
+const inputFiled      = $.querySelectorAll(".input-filed");
+const inputElems      = $.querySelectorAll(".input-filed > input");
+const modalElem       = $.querySelector(".modal");
+const showPasswordBtn = $.querySelectorAll(".passwordEye");
+let dataBase          = null;
 
 // [+] Users Data
 let userDataBase = [];
 
 // [+] Functions
 function focusOnInputHandler(item){
-    this.parentElement.classList.add("input-filed--active")
+    this.classList.add("input-filed--active")
 }
 function temporaryValidation(event){
     let inputValue = event.value;
