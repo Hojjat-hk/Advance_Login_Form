@@ -40,7 +40,7 @@ function checkInputValidection(){
                         isMatch = true;
                         validInput(input)
                     }else{
-                        showModal("#FF6868", "The passwords do not match !");
+                        showModal(false, "The passwords do not match !");
 
                         invalidInput(input)
                         invalidInput(inputElems[inputElems.length-2])

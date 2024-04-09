@@ -46,15 +46,20 @@ function inputValidate(inputElem, datasetValue, regEx, modalStatus, modalValue){
         }
     }
 }
-function showModal(color = '',text = ''){
-    modalElem.style.cssText = `background-color: ${color};transform: translateX(0);`
-    modalElem.firstElementChild.innerHTML = text;
+function showModal(modalStatus, modalValue){
+    if(modalStatus){
+        modalElem.style.cssText = `background-color:#74E291;transform: translateX(0);`
+        modalElem.firstElementChild.innerHTML = modalValue;
+    }else{
+        modalElem.style.cssText = `background-color: #FF6868;transform: translateX(0);`
+        modalElem.firstElementChild.innerHTML = modalValue;
+    }
     closeModal();
 }
 function closeModal(){
     setTimeout(function(){
         modalElem.style.transform = "translateX(100%)";
-    },2900);
+    },2800);
 }
 function showPasswordHandler(event){
     if(event.target.classList.contains("fa-eye-slash")){
