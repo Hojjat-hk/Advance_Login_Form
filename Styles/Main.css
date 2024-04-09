@@ -178,7 +178,7 @@ button:hover > #btnCircleScale{
 
 /* -- Responsive Able Website -- */
 @media only screen and (max-width: 425px){
-    button, input[type="checkbox"], .passwordEye{
-        cursor: none;
+    *, *::before, *::after{
+        cursor: auto;
     }
 }
