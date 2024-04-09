@@ -8,10 +8,6 @@ const inputFiled      = $.querySelectorAll(".input-filed");
 const inputElems      = $.querySelectorAll(".input-filed > input");
 const modalElem       = $.querySelector(".modal");
 const showPasswordBtn = $.querySelectorAll(".passwordEye");
-let dataBase          = null;
-
-// [+] Users Data
-let userDataBase = [];
 
 // [+] Functions
 function focusOnInputHandler(item){
@@ -63,28 +59,6 @@ function changeLocation (locationX = ""){
         location.replace(locationX);
     },1000)
 }
-// Use Indexed DB ++
-function createIndexedDB () {
-    let dbOpenReq = indexedDB.open("RealWorld", 3);
-    dbOpenReq.addEventListener("success", event => {
-        dataBase = event.target.result;
-    });
-    dbOpenReq.addEventListener("upgradeneeded", event => {
-        dataBase = event.target.result;
-        if(!dataBase.objectStoreNames.contains("usersInformation")){
-            dataBase.createObjectStore("usersInformation", {
-                keyPath : "userID"
-            });
-        }
-    });
-}
-// Use Indexed DB ++
-function returnTransactionObject (databaseName, objectStoreName, txMode) {
-    let transaction = databaseName.transaction(objectStoreName, txMode);
-    let store = transaction.objectStore(objectStoreName);
-    return store;
-}
-
 // [+] Events
 inputFiled.forEach(function(item){
     item.addEventListener("click", focusOnInputHandler)

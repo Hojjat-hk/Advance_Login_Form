@@ -73,44 +73,11 @@ function checkInputValidection(){
             }
         });
         if(firstName && lastName && emailAddress && isMatch && passStep2){
-            let newUser = {
-                userID : Math.round(Math.random() * 9999),
-                firstName : firstName,
-                lastName : lastName,
-                email : emailAddress,
-                password : passStep2
-            }
-            avoidDuplicateEmails(emailAddress, newUser);
+
         }
     }else{
         acceptRulesBtn.nextElementSibling.style.color = "#C10905";
     }
-}
-// This function is for backend (Duplicate Emails) ++
-function avoidDuplicateEmails(emailAddress, newUser){
-    let userObjectStore = returnTransactionObject(dataBase, "usersInformation", "readonly");
-    let req = userObjectStore.getAll();
-    req.addEventListener("success", () => {
-        let allUser = req.result;
-
-        let isDuplicateEmail = allUser.some(user => user.email === emailAddress);
-
-        if(!isDuplicateEmail){
-            addUserToDataBase(newUser);
-        }else{
-            showModal("#FF6868", "The email you entered already exists!");
-            invalidInput(inputElems[inputElems.length - 3]);
-        }
-    });
-}
-// If all the inputs are valid and the email is not duplicated in the database
-function addUserToDataBase(newUser){
-    let userObjectStore = returnTransactionObject(dataBase, "usersInformation", "readwrite");
-    let req = userObjectStore.add(newUser);
-    req.addEventListener("success", () => {
-        showModal("#74E291", "Account created Successful");
-        changeLocation("Success/Registration-Successful.html");
-    });
 }
 // [+] Events
 acceptRulesBtn.addEventListener("click", acceptTerms);
