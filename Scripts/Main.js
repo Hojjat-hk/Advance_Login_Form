@@ -27,19 +27,24 @@ function temporaryValidation(event){
     if(!inputValue || inputValue.length < 3){
         invalidInput(event);
     }else{
-        validInput(event);
+        PUValidInput(event);
     }
 }
 function invalidInput(element){
     element.parentElement.classList.add("invalid-input");
 }
 function validInput(element){
-    element.parentElement.classList.contains("invalid-input") && element.parentElement.classList.remove("invalid-input") && element.parentElement.classList.add("valid-input");
+    element.parentElement.classList.add("valid-input");
+}
+function PUValidInput(element){
+    element.parentElement.classList.contains("invalid-input") && element.parentElement.classList.remove("invalid-input");
+    element.parentElement.classList.contains("valid-input") && element.parentElement.classList.remove("valid-input");
 }
 function inputValidate(inputElem, datasetValue, regEx, modalStatus, modalValue){
     let inputValue = inputElem.value.trim();
     if(inputElem.dataset.name === datasetValue){
         if(regEx.test(inputValue)){
+            PUValidInput(inputElem);
             validInput(inputElem);
             return inputValue;
         }else{

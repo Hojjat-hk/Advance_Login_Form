@@ -28,7 +28,8 @@ function checkInputValidection(){
             if(input.dataset.name === "passStep1"){
                 if(input.value.trim().length >= 8){
                     passStep1 = input.value.trim();
-                    validInput(input)
+                    PUValidInput(input);
+                    validInput(input);
                 }else{
                     invalidInput(input)
                 }
@@ -38,7 +39,8 @@ function checkInputValidection(){
                     if(passStep1 === input.value){
                         passStep2 = input.value.trim();
                         isMatch = true;
-                        validInput(input)
+                        PUValidInput(input)
+                        validInput(input);
                     }else{
                         showModal(false, "The passwords do not match !");
 
