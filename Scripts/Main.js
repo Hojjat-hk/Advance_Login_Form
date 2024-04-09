@@ -23,7 +23,7 @@ function focusOnInputHandler(item){
                 el.focus();
             }
         }
-    },20)
+    },50)
 }
 function temporaryValidation(event){
     let inputValue = event.value;
