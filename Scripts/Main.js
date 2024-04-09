@@ -35,6 +35,17 @@ function invalidInput(element){
 function validInput(element){
     element.parentElement.classList.contains("invalid-input") && element.parentElement.classList.remove("invalid-input");
 }
+function inputValidate(inputElem, datasetValue, regEx, modalStatus, modalValue){
+    if(inputElem.dataset.name === datasetValue){
+        if(regEx.test(inputElem.value.trim())){
+            validInput(inputElem);
+            return inputElem.value.trim();
+        }else{
+            modalValue && showModal(modalStatus, modalValue);
+            invalidInput(inputElem);
+        }
+    }
+}
 function showModal(color = '',text = ''){
     modalElem.style.cssText = `background-color: ${color};transform: translateX(0);`
     modalElem.firstElementChild.innerHTML = text;

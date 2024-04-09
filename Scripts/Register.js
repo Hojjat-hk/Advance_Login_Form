@@ -22,31 +22,9 @@ function checkInputValidection(){
     if(acceptRulesBtn.checked){
         acceptRulesBtn.nextElementSibling.style.color = "#000";
         inputElems.forEach(function(input){
-            if(input.dataset.name === "firstName"){
-                if(nameValidateRegEx.test(input.value.trim())){
-                    firstName = input.value.trim();
-                    validInput(input)
-                }else{
-                    invalidInput(input)
-                }
-            }
-            if(input.dataset.name === "lastName"){
-                if(nameValidateRegEx.test(input.value.trim())){
-                    lastName = input.value.trim();
-                    validInput(input)
-                }else{
-                    invalidInput(input)
-                }
-            }
-            if(input.dataset.name === "emailAddress"){
-                if(emailValidateRegEx.test(input.value.trim())){
-                    emailAddress = input.value.trim();
-                    validInput(input)
-                }else{
-                    showModal("#FF6868", "Please enter a valid email!");
-                    invalidInput(input)
-                }
-            }
+            firstName = inputValidate(input, "firstName", nameValidateRegEx);
+            lastName  = inputValidate(input, "lastName", nameValidateRegEx);
+            emailAddress = inputValidate(input, "emailAddress", emailValidateRegEx, false, "Please enter a valid email!");
             if(input.dataset.name === "passStep1"){
                 if(input.value.trim().length >= 8){
                     passStep1 = input.value.trim();
