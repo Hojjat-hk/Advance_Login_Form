@@ -4,6 +4,7 @@ const $ = document;
 // [+] Variables
 const usernameInput   = $.querySelector("#usernameLoginInput");
 const passwordInput   = $.querySelector("#passwordLoginInput");
+const form            = $.querySelector(".form");
 const inputFiled      = $.querySelectorAll(".input-filed");
 const inputElems      = $.querySelectorAll(".input-filed > input");
 const modalElem       = $.querySelector(".modal");
