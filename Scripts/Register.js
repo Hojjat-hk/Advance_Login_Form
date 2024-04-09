@@ -30,7 +30,7 @@ function checkInputValidection(){
                     invalidInput(input)
                 }
             }
-            if(input.dataset.name === "LastName"){
+            if(input.dataset.name === "lastName"){
                 if(nameValidateRegEx.test(input.value.trim())){
                     lastName = input.value.trim();
                     validInput(input)
@@ -47,7 +47,7 @@ function checkInputValidection(){
                     invalidInput(input)
                 }
             }
-            if(input.dataset.name === "PassStep1"){
+            if(input.dataset.name === "passStep1"){
                 if(input.value.trim().length >= 8){
                     passStep1 = input.value.trim();
                     validInput(input)
@@ -55,7 +55,7 @@ function checkInputValidection(){
                     invalidInput(input)
                 }
             }
-            if(input.dataset.name === "PassStep2"){
+            if(input.dataset.name === "passStep2"){
                 if(input.value.trim().length >= 8){
                     if(passStep1 === input.value){
                         passStep2 = input.value.trim();
