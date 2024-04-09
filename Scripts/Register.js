@@ -3,7 +3,7 @@ const acceptRulesBtn = $.querySelector('#acceptRule');
 const subBtn        = $.querySelector(".login-submit-btn");
 
 // [+] Regular Expression
-const nameValidateRegEx = /^[A-Za-zÀ-ÖØ-öø-ÿا-ی ]{3,}$/;
+const nameValidateRegEx = /^[A-Za-zÀ-ÖØ-öø-ÿا-ی ]{3,20}$/;
 const emailValidateRegEx = /^[A-Za-z0-9.+\-_~!#$%&‘'/=^{}|*?`]+@[A-Za-z0-9][A-Za-z0-9-]*(?:\.[A-Za-z0-9-]+)+[A-Za-z0-9]$/;
 
 // [+] Functions
