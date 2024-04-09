@@ -34,7 +34,7 @@ function invalidInput(element){
     element.parentElement.classList.add("invalid-input");
 }
 function validInput(element){
-    element.parentElement.classList.contains("invalid-input") && element.parentElement.classList.remove("invalid-input");
+    element.parentElement.classList.contains("invalid-input") && element.parentElement.classList.remove("invalid-input") && element.parentElement.classList.add("valid-input");
 }
 function inputValidate(inputElem, datasetValue, regEx, modalStatus, modalValue){
     let inputValue = inputElem.value.trim();

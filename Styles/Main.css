@@ -150,6 +150,10 @@ body{
     background-color:#FFF1F0;
     border-color:#C10905;
 }
+.valid-input{
+    background-color: #e4ffea;
+    border-color: #74E291;
+}
 .passwordEye{
     color: #717171;
     position: absolute;
