@@ -51,7 +51,7 @@ function checkInputValidection(){
             }
         });
         if(firstName && lastName && emailAddress && isMatch && passStep2){
-
+            form.submit();
         }
     }else{
         acceptRulesBtn.nextElementSibling.style.color = "#C10905";
