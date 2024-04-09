@@ -22,16 +22,16 @@ function checkInputValidection(){
     if(acceptRulesBtn.checked){
         acceptRulesBtn.nextElementSibling.style.color = "#000";
         inputElems.forEach(function(input){
-            firstName = inputValidate(input, "firstName", nameValidateRegEx);
-            lastName  = inputValidate(input, "lastName", nameValidateRegEx);
-            emailAddress = inputValidate(input, "emailAddress", emailValidateRegEx, false, "Please enter a valid email!");
+            (input.dataset.name === "firstName") && (firstName = inputValidate(input, "firstName", nameValidateRegEx));
+            (input.dataset.name === "lastName") && (lastName  = inputValidate(input, "lastName", nameValidateRegEx));
+            (input.dataset.name === "emailAddress") && (emailAddress = inputValidate(input, "emailAddress", emailValidateRegEx, false, "Please enter a valid email!"));
             if(input.dataset.name === "passStep1"){
                 if(input.value.trim().length >= 8){
                     passStep1 = input.value.trim();
                     PUValidInput(input);
-                    validInput(input);
+                    validInput(input);;
                 }else{
-                    invalidInput(input)
+                    invalidInput(input);
                 }
             }
             if(input.dataset.name === "passStep2"){
@@ -39,13 +39,13 @@ function checkInputValidection(){
                     if(passStep1 === input.value){
                         passStep2 = input.value.trim();
                         isMatch = true;
-                        PUValidInput(input)
+                        PUValidInput(input);
                         validInput(input);
                     }else{
                         showModal(false, "The passwords do not match !");
-
-                        invalidInput(input)
-                        invalidInput(inputElems[inputElems.length-2])
+                        invalidInput(input);
+                        PUValidInput(inputElems[inputElems.length-2]);
+                        invalidInput(inputElems[inputElems.length-2]);
                     }
                 }else{
                     invalidInput(input)

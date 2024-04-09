@@ -42,16 +42,18 @@ function PUValidInput(element){
 }
 function inputValidate(inputElem, datasetValue, regEx, modalStatus, modalValue){
     let inputValue = inputElem.value.trim();
+    let variable = "";
     if(inputElem.dataset.name === datasetValue){
         if(regEx.test(inputValue)){
             PUValidInput(inputElem);
             validInput(inputElem);
-            return inputValue;
+            variable = inputValue;
         }else{
             modalValue && showModal(modalStatus, modalValue);
             invalidInput(inputElem);
         }
     }
+    return variable;
 }
 function showModal(modalStatus, modalValue){
     if(modalStatus){
