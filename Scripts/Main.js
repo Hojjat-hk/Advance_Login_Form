@@ -97,4 +97,3 @@ inputElems.forEach(function(item){
         event.preventDefault();
     });
 });
-window.addEventListener("load", createIndexedDB);
