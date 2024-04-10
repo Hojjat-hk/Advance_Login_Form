@@ -7,8 +7,6 @@ function performLoginOperation() {
     inputElems.forEach((input) => {
         usernameValue = (input.dataset.name === "usernameLoginInput") && (inputValidate(input, "usernameLoginInput", emailValidateRegEx, false, "Please enter a valid email !"));
         passwordValue = (input.dataset.name === "passwordLoginInput") && (inputValidate(input, "passwordLoginInput", passwordValidateRegEx));
-
-        console.log(usernameValue, passwordValue)
         if(usernameValue && passwordValue){
             form.submit();
         }
