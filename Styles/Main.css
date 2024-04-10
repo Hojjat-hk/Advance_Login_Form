@@ -59,6 +59,7 @@ body{
     border-top-left-radius: 65px;
     border-bottom-left-radius: 65px;
     transition: all 0.6s ease;
+    transition-delay: 0.25s;
     background-color: #74E291;
     transform: translateX(100%);
 }
