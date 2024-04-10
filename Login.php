@@ -25,11 +25,11 @@
             <div class="input-container d-flex alg-itm-cntr jst-cnt-cntr">
                 <div class="input-filed d-flex jst-cnt-cntr">
                     <label for="usernameLoginInput">Email</label>
-                    <input type="email" placeholder="Enter Text . ." id="usernameLoginInput" name="usernameLoginInput" autofocus minlength="7" maxlength="254" required autocomplete="off">
+                    <input type="email" placeholder="Enter Text . ." id="usernameLoginInput" name="usernameLoginInput" data-name="usernameLoginInput" autofocus minlength="7" maxlength="254" required autocomplete="off">
                 </div>
                 <div class="input-filed d-flex jst-cnt-cntr">
                     <label for="passwordLoginInput">Password</label>
-                    <input type="password" placeholder="Enter Text . ." id="passwordLoginInput" name="passwordLoginInput" autofocus minlength="8" maxlength="16" required autocomplete="off">
+                    <input type="password" placeholder="Enter Text . ." id="passwordLoginInput" name="passwordLoginInput" data-name="passwordLoginInput" autofocus minlength="8" maxlength="16" required autocomplete="off">
                     <i 	class="passwordEye far fa-eye-slash"></i>
                 </div>
             </div>
