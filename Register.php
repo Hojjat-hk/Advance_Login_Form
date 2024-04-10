@@ -79,7 +79,7 @@ const VARIABLE_NAMES = [...SAFE_VARIABLE_NAMES, "passwordStepOne", "passwordStep
 validateInput();
 sanitizeInput();
 
-$getUserResultByEmail = fn(string $email): mysqli_result|false => Database::query("SELECT * FROM user WHERE Email = ?;", "s", $email);
+$getUserResultByEmail = fn(string $email): mysqli_result => Database::query("SELECT * FROM user WHERE Email = ?;", "s", $email);
 $user = new User(null, $_POST["userFirstNameInput"], $_POST["userLastNameInput"], $_POST["emailRegisterInput"], $_POST["passwordStepOne"]);
 
 try {
