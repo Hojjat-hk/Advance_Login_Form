@@ -2,10 +2,6 @@
 const acceptRulesBtn = $.querySelector('#acceptRule');
 const subBtn        = $.querySelector(".login-submit-btn");
 
-// [+] Regular expression patterns
-const nameValidateRegEx = /^[A-Za-zÀ-ÖØ-öø-ÿءآ-ی ‌]{2,30}$/;
-const emailValidateRegEx = /^[A-Za-z0-9.+\-_~!#$%&‘'/=^{}|*?`]+@[A-Za-z0-9][A-Za-z0-9-]*(?:\.[A-Za-z0-9-]+)+[A-Za-z0-9]$/;
-
 // [+] Functions
 function acceptTerms(){
     if(acceptRulesBtn.checked){
