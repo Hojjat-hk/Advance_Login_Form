@@ -21,6 +21,12 @@
   <li>CSS</li>
   <li>JavaScript</li>
   <li>PHP</li>
+</ul><br>
+
+**❗ Notes**
+
+<ul>
+<li>PHP >= 8.2.4 is required to properly execute the server-side code.</li>
 </ul>
 <hr>
 
