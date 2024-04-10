@@ -2,14 +2,16 @@
 const $ = document;
 
 // [+] Variables
-const usernameInput   = $.querySelector("#usernameLoginInput");
-const passwordInput   = $.querySelector("#passwordLoginInput");
 const form            = $.querySelector(".form");
 const inputFiled      = $.querySelectorAll(".input-filed");
 const inputElems      = $.querySelectorAll(".input-filed > input");
 const modalElem       = $.querySelector(".modal");
 const showPasswordBtn = $.querySelectorAll(".passwordEye");
 
+// [+] Regular expression patterns
+const nameValidateRegEx = /^[A-Za-zÀ-ÖØ-öø-ÿءآ-ی ‌]{2,30}$/;
+const emailValidateRegEx = /^[A-Za-z0-9.+\-_~!#$%&‘'/=^{}|*?`]+@[A-Za-z0-9][A-Za-z0-9-]*(?:\.[A-Za-z0-9-]+)+[A-Za-z0-9]$/;
+const passwordValidateRegEx = /^\S{8,30}$/
 // [+] Functions
 function focusOnInputHandler(item){
     this.classList.contains("input-filed--active") || this.classList.add("input-filed--active");
