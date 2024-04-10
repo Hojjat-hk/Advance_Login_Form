@@ -1,3 +1,14 @@
+<?php
+declare(strict_types=1);
+require_once("../Classes/Session.php");
+
+Session::navigateIfSessionIsInvalid("../Login.php");
+
+// TODO: Extend behavior if necessary
+session_unset();
+session_destroy();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +28,10 @@
         <h3 class="successful-text">
             Account created
             <br>
-            Successful
+            successfully.
         </h3>
-        <p>Verification code has been sent <br> on the provided email. <a href="https://Github.com">Verify Now</a></p>
-        <a href="../Login.html">
+        <p>Verification code has been sent <br> to the provided email. <a href="https://github.com">Verify now.</a></p>
+        <a href="../Login.php">
             <button class="send-login">
                 <div id="btnCircleScale"></div>
                 <span>Log In Now</span>

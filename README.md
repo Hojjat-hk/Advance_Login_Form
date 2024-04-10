@@ -1,38 +1,36 @@
-<h1 align="center">In the Name Of God</h1>
+<h1 align="center">In the name of God</h1>
+<hr>
 
-- **🌱 Advance Login & Register Form**
+- **🌱 Advanced Login & Registration Form**
 
 -  **🆓 Free to the public**
  
-- - - - - - - - - - - - - - - - - - -  
-🛠️  Attributes : 
+<hr>
+
+**🛠️ Attributes:**
 <br>
 <ul>
-  <li>Clean coding and easy to understand for the audience</li>
-  <li>Show the appropriate page in case of successful log-in</li>
-  <li>Responsive</li>
-  <li>Beautiful Design</li>
-  <br>
-  <li><b>Limitations :</b></li>
-  <li>It is impossible to create an account with a duplicate email</li>
-  <li>When creating an account, the password must be the same</li>
-  <li>Sensitive to invalid inputs</li>
-</ul>
-<br>
-⚒   Language & Tool :
+  <li>A beautiful and eye-catching UI design, along with a pleasant responsive layout.</li>
+  <li>Comes with complete client-side & server-side form validation.</li>
+  <li>Clean and easy to understand coding style.</li>
+</ul><br>
+
+**⚒ Language & Tools:**
 <ul>
-  <li>Html</li>
-  <li>Css</li>
-  <li>Javascript</li>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>PHP</li>
 </ul>
-▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪  ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪<br>
-🖼️ Picture :
+<hr>
+
+**🖼️ Pictures:**
 <br>
 <br>
 <img src="Asset/Screen/Screenshot1.png" alt="Preview Picture">
-<img src="Asset/Screen/Screenshot2.png" alt="Preview Picture">
-<br>
-- - - - - - - - - - - - - - - - - - - 
+
+<img src="Asset/Screen/Screenshot2.png" alt="Preview Picture"><br>
+<hr>
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://twitter.com/hojjat_hk" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="hojjat_hk" height="30" width="40" /></a>    
@@ -40,11 +38,12 @@
 <a href="https://instagram.com/hojjat__hk" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="hojjat_.hk" height="30" width="40" /></a>
 </p>
 <br>
-- - - - - - - - - - - - -  - - - - - - 
-<br>
-<br>
+<hr>
 Thank you for your beautiful look :) 🤍
 <br><br>
-- Designer : <a href="https://linkedin.com/in/gopal-krishan-sharma/"><i>Gopal Krishan Sharma</i></a>
-<br>
-- Developer : <a href="https://github.com/Hojjat-hk/"><i>Hojjat Hekmatipour</i></a>
+
+* Designer: <a href="https://linkedin.com/in/gopal-krishan-sharma/"><i>Gopal Krishan Sharma</i></a>
+
+* Front-end developer: <a href="https://github.com/Hojjat-hk/"><i>Hojjat Hekmatipour</i></a>
+
+* Back-end developer: <a href="https://github.com/Wirmaple73/"><i>Alireza Shahidi Fard</i></a>

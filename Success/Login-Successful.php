@@ -1,3 +1,14 @@
+<?php
+declare(strict_types=1);
+require_once("../Classes/Session.php");
+
+Session::navigateIfSessionIsInvalid("../Login.php");
+
+// TODO: Extend behavior if necessary
+session_unset();
+session_destroy();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,12 +26,12 @@
         <img src="../Asset/Pic/Correct-tick.svg" alt="successful picture">
     </div>
     <h3 class="successful-text">
-        Login Successful !
+        Login Successful!
     </h3>
-    <p>You have successfully signed in to your account. <br> You can close this window and continue using the product.</p>
+    <p>You have successfully signed in to your account. <br> You can now close this window and continue to the website.</p>
     <button class="close-window">
         <div id="btnCircleScale"></div>
-        <span>Close Windows</span>
+        <span>Close Window</span>
     </button>
 </section>
 <script>

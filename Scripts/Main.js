@@ -24,7 +24,7 @@ function focusOnInputHandler(item){
 }
 function temporaryValidation(event){
     let inputValue = event.value;
-    if(!inputValue || inputValue.length < 3){
+    if(!inputValue || inputValue.length < 2){
         invalidInput(event);
     }else{
         PUValidInput(event);

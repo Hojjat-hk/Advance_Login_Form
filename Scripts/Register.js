@@ -2,8 +2,8 @@
 const acceptRulesBtn = $.querySelector('#acceptRule');
 const subBtn        = $.querySelector(".login-submit-btn");
 
-// [+] Regular Expression
-const nameValidateRegEx = /^[A-Za-zÀ-ÖØ-öø-ÿا-ی ]{3,20}$/;
+// [+] Regular expression patterns
+const nameValidateRegEx = /^[A-Za-zÀ-ÖØ-öø-ÿءآ-ی ‌]{2,30}$/;
 const emailValidateRegEx = /^[A-Za-z0-9.+\-_~!#$%&‘'/=^{}|*?`]+@[A-Za-z0-9][A-Za-z0-9-]*(?:\.[A-Za-z0-9-]+)+[A-Za-z0-9]$/;
 
 // [+] Functions
@@ -15,8 +15,13 @@ function acceptTerms(){
         subBtn.classList.contains("login-submit-btn--active") && subBtn.classList.remove("login-submit-btn--active");
     }
 }
-// Validection input
-function checkInputValidection(){
+// Validate input
+function checkInputValidation(){
+    // FIXME: Fix this function and remove the two following lines afterwards:
+    form.submit();
+    return;
+    //
+
     let firstName, lastName, emailAddress, passStep1, passStep2;
     let isMatch = false;
     if(acceptRulesBtn.checked){
@@ -24,7 +29,7 @@ function checkInputValidection(){
         inputElems.forEach(function(input){
             firstName = inputValidate(input, "firstName", nameValidateRegEx);
             lastName  = inputValidate(input, "lastName", nameValidateRegEx);
-            emailAddress = inputValidate(input, "emailAddress", emailValidateRegEx, false, "Please enter a valid email!");
+            emailAddress = inputValidate(input, "emailAddress", emailValidateRegEx, false, "Please enter a valid email.");
             if(input.dataset.name === "passStep1"){
                 if(input.value.trim().length >= 8){
                     passStep1 = input.value.trim();
@@ -42,7 +47,7 @@ function checkInputValidection(){
                         PUValidInput(input)
                         validInput(input);
                     }else{
-                        showModal(false, "The passwords do not match !");
+                        showModal(false, "The passwords do not match.");
 
                         invalidInput(input)
                         invalidInput(inputElems[inputElems.length-2])
@@ -52,6 +57,7 @@ function checkInputValidection(){
                 }
             }
         });
+
         if(firstName && lastName && emailAddress && isMatch && passStep2){
             form.submit();
         }
@@ -61,9 +67,9 @@ function checkInputValidection(){
 }
 // [+] Events
 acceptRulesBtn.addEventListener("click", acceptTerms);
-subBtn.addEventListener("click", checkInputValidection)
+subBtn.addEventListener("click", checkInputValidation)
 inputElems[inputElems.length - 1].addEventListener("keydown", function(event){
     if(event.key === "Enter"){
-        checkInputValidection();
+        checkInputValidation();
     }
 })
