@@ -3,8 +3,16 @@ const subBtn = $.querySelector(".login-submit-btn");
 
 // [+] Functions
 function performLoginOperation() {
-    let usernameValue = usernameInput.value.trim();
-    let passwordValue = passwordInput.value.trim();
+    let usernameValue, passwordValue;
+    inputElems.forEach((input) => {
+        usernameValue = (input.dataset.name === "usernameLoginInput") && (inputValidate(input, "usernameLoginInput", emailValidateRegEx, false, "Please enter a valid email !"));
+        passwordValue = (input.dataset.name === "passwordLoginInput") && (inputValidate(input, "passwordLoginInput", passwordValidateRegEx));
+
+        console.log(usernameValue, passwordValue)
+        if(usernameValue && passwordValue){
+            form.submit();
+        }
+    });
 }
 
 // [+] Events
@@ -14,6 +22,4 @@ inputElems[1].addEventListener("keydown", function(event) {
     }
 });
 
-subBtn.addEventListener("click", function() {
-    form.submit();
-});
+subBtn.addEventListener("click", performLoginOperation);
