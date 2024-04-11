@@ -18,15 +18,15 @@ function checkInputValidation(){
     if(acceptRulesBtn.checked){
         acceptRulesBtn.nextElementSibling.style.color = "#000";
         inputElems.forEach(function(input){
-            (input.dataset.name === "firstName") && (firstName = inputValidate(input, "firstName", nameValidateRegEx));
-            (input.dataset.name === "lastName") && (lastName  = inputValidate(input, "lastName", nameValidateRegEx));
-            (input.dataset.name === "emailAddress") && (emailAddress = inputValidate(input, "emailAddress", emailValidateRegEx, false, "Please enter a valid email."));
+            (input.dataset.name === "firstName") && (firstName = inputValidate(input, "firstName", nameValidateRegEx, false, "Firstname must be between 2 and 30 characters long."));
+            (input.dataset.name === "lastName") && (lastName  = inputValidate(input, "lastName", nameValidateRegEx, false, "Lastname must be between 2 and 30 characters long."));
+            (input.dataset.name === "emailAddress") && (emailAddress = inputValidate(input, "emailAddress", emailValidateRegEx, false, "Please enter your email correctly."));
 			
             if(input.dataset.name === "passStep1"){
                 if(input.value.trim().length >= 8){
                     passStep1 = input.value.trim();
                     PUValidInput(input);
-                    validInput(input);;
+                    validInput(input);
                 }else{
                     invalidInput(input);
                 }
@@ -39,7 +39,7 @@ function checkInputValidation(){
                         PUValidInput(input);
                         validInput(input);
                     }else{
-                        showModal(false, "The passwords do not match.");
+                        showModal(false, "Please ensure your password matches the confirmation password.");
                         invalidInput(input);
                         PUValidInput(inputElems[inputElems.length-2]);
                         invalidInput(inputElems[inputElems.length-2]);
