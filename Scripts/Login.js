@@ -5,9 +5,9 @@ const subBtn = $.querySelector(".login-submit-btn");
 function performLoginOperation() {
     let usernameValue, passwordValue;
     inputElems.forEach((input) => {
-        usernameValue = (input.dataset.name === "usernameLoginInput") && (inputValidate(input, "usernameLoginInput", emailValidateRegEx, false, "Please enter a valid email !"));
-        passwordValue = (input.dataset.name === "passwordLoginInput") && (inputValidate(input, "passwordLoginInput", passwordValidateRegEx));
-        if(usernameValue && passwordValue){
+        (input.dataset.name === "usernameLoginInput") && (usernameValue = inputValidate(input, "usernameLoginInput", emailValidateRegEx, false, "Please enter your email correctly."));
+        (input.dataset.name === "passwordLoginInput") && (passwordValue = inputValidate(input, "passwordLoginInput", passwordValidateRegEx, false, "Password must be between 8 and 16 characters long."));
+        if(usernameValue && passwordValue) {
             form.submit();
         }
     });
