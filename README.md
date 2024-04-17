@@ -50,6 +50,6 @@ Thank you for your beautiful look :) 🤍
 
 * Designer: <a href="https://linkedin.com/in/gopal-krishan-sharma/"><i>Gopal Krishan Sharma</i></a>
 
-* Front-end developer: <a href="https://github.com/Hojjat-hk/"><i>Hojjat Hekmatipour</i></a>
+* Front-end developer: <a href="https://github.com/Hojjat-hk/"><i>Hojjat Hekmatipour</i></a> 
 
 * Back-end developer: <a href="https://github.com/Wirmaple73/"><i>Alireza Shahidi Fard</i></a>
